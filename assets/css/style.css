@@ -241,15 +241,13 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;
     margin: 30px 0 60px;
     letter-spacing: 1px;
 }
-.header-text a {
+/* .header-text a {
     width: 300px;
     height: 60px;
     line-height: 60px;
     border-radius: 20px;
     text-transform: capitalize;
     color: #fff;
-    background: #b636ff;
-    border:1px solid #b636ff;
     box-shadow: 0 5px 20px rgba(0,0,0,.2);
     -webkit-transition: 0.3s linear; 
     -moz-transition: 0.3s linear; 
@@ -257,7 +255,46 @@ nav.navbar.bootsnav .navbar-toggle i{color: #d92cf9;
     -o-transition: 0.3s linear; 
     transition: 0.3s linear;
 }
-.header-text a:hover{ box-shadow: 0 5px 20px rgba(0,0,0,.4);background:#9f00ff;border: 1px solid #9f00ff;}
+.header-text .contact {
+    background: #b636ff;
+    border:1px solid #b636ff;
+}
+.header-text .download {
+    background: #dfa9ff;
+    border:1px solid #dfa9ff;
+} */
+
+
+.header-text a {
+    display: inline-block;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    -webkit-transition: 0.3s linear; 
+    -moz-transition: 0.3s linear; 
+    -ms-transition: 0.3s linear; 
+    -o-transition: 0.3s linear; 
+    transition: 0.3s linear;
+}
+
+.header-text .contactbutton {
+    background: #ae22ff;
+    border: 1px solid #ae22ff;
+}
+
+.header-text .downloadbutton {
+    background: #cd76ff;
+    border: 1px solid #cd76ff;
+}
+
+
+.header-text .contactbutton:hover { box-shadow: 0 5px 20px rgba(0,0,0,.4);background:#9f00ff;border: 1px solid #9f00ff;}
+.header-text .downloadbutton:hover { box-shadow: 0 5px 20px rgba(0,0,0,.4);background:#be5bfc;border: 1px solid #be5bfc;}
 /*.header-text-area*/
 
 /*-------------------------------------
