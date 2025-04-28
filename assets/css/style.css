@@ -501,7 +501,6 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
 }
 
 .progress-bar {
-   background: #b636ff;
     border-radius: 3px;
    -webkit-transition: width 1.5s ease-in-out;
    -ms-transition: width 1.5s ease-in-out;
@@ -509,6 +508,17 @@ span.single-timeline-horizontal.spacial-horizontal-line {width: 88px;}
    -o-transition: width 1.5s ease-in-out;
    transition: width 1.5s ease-in-out;
 }
+
+#progress-bar-uncompleted{
+    background: #b636ff;
+}
+
+#progress-bar-completed{
+    background: goldenrod;
+}
+
+
+
 .tooltip{
    position:relative;
    float:right;
