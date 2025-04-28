@@ -3,6 +3,7 @@
 
     <head>
         <!-- meta data -->
+		
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -236,7 +237,7 @@
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 									<div class="item">
-										<video class="horizontal-video" autoplay muted loop>
+										<video class="horizontal-video" style="filter: brightness(1.25);"  autoplay muted loop>
 											<source src="assets/images/portfolio/flower.mp4" type="video/mp4">
 										</video>
 										<div class="isotope-overlay">
@@ -270,10 +271,12 @@
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 									<div class="item">
-										<img src="assets/images/portfolio/boardgame.jpeg" class="horizontal-img" alt="portfolio image"/>
+										<video class="horizontal-video" style="filter: brightness(0.95);" autoplay muted loop>
+											<source src="assets/images/portfolio/mj.mp4" type="video/mp4">
+										</video>
 										<div class="isotope-overlay">
 											<a href="javascript:void(0)">
-												多款桌遊、酒game 設12人大檯
+												電動麻雀檯
 											</a>
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
@@ -284,14 +287,49 @@
 
 								<div class="col-sm-4">
 									<div class="item">
-										<img src="assets/images/portfolio/seat.jpeg" class="vertical-img" alt="portfolio image"/>
+										<video class="vertical-video"  autoplay muted loop>
+											<source src="assets/images/portfolio/seat.mp4" type="video/mp4">
+										</video>
 										<div class="isotope-overlay">
 											<a href="javascript:void(0)">
-												打卡牆
+												花牆搖搖凳打卡空間
 											</a>
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 								</div><!-- /.col -->
+
+								<div class="col-sm-4">
+									<div class="item">
+										<img src="assets/images/portfolio/gaming.jpeg" class="horizontal-img" alt="portfolio image"/>
+										<div class="isotope-overlay">
+											<a href="javascript:void(0)">
+												PS5 及 Switch
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+									<div class="item">
+										<img src="assets/images/portfolio/boardgame.jpeg" class="horizontal-img" alt="portfolio image"/>
+										<div class="isotope-overlay">
+											<a href="javascript:void(0)">
+												多款桌遊
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+								</div><!-- /.col -->
+
+								<div class="col-sm-4">
+									<div class="item">
+										<img src="assets/images/portfolio/blossom.jpg" class="vertical-img" alt="portfolio image"/>
+										<div class="isotope-overlay">
+											<a href="javascript:void(0)">
+												櫻花樹打卡空間
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+								</div><!-- /.col -->
+							</div><!-- /.row -->
+
+							<div class="row">
 
 								<div class="col-sm-4">
 									<div class="item">
@@ -303,18 +341,22 @@
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 									<div class="item">
-										<img src="assets/images/portfolio/gaming.jpeg" class="horizontal-img" alt="portfolio image"/>
+										<img src="assets/images/portfolio/winegame.jpg" class="horizontal-img" alt="portfolio image"/>
 										<div class="isotope-overlay">
 											<a href="javascript:void(0)">
-												PS5 及 Switch
+												多款酒局遊戲
 											</a>
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 								</div><!-- /.col -->
 
+
+
 								<div class="col-sm-4">
 									<div class="item">
-										<img src="assets/images/portfolio/claw.jpeg" class="vertical-img" alt="portfolio image"/>
+										<video class="vertical-video"  style="filter: brightness(0.95);" autoplay muted loop>
+											<source src="assets/images/portfolio/claw.mp4" type="video/mp4">
+										</video>
 										<div class="isotope-overlay">
 											<a href="javascript:void(0)">
 												夾公仔機
@@ -322,7 +364,27 @@
 										</div><!-- /.isotope-overlay -->
 									</div><!-- /.item -->
 								</div><!-- /.col -->
+
+								<div class="col-sm-4">
+									<div class="item">
+										<img src="assets/images/portfolio/pin.jpg" class="horizontal-img" alt="portfolio image"/>
+										<div class="isotope-overlay">
+											<a href="javascript:void(0)">
+												電子飛鏢靶
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+									<div class="item">
+										<img src="assets/images/portfolio/drink.jpg" class="horizontal-img" alt="portfolio image"/>
+										<div class="isotope-overlay">
+											<a href="javascript:void(0)">
+												雪櫃飲品任飲
+											</a>
+										</div><!-- /.isotope-overlay -->
+									</div><!-- /.item -->
+								</div><!-- /.col -->
 							</div><!-- /.row -->
+
 						</div><!--/.isotope-->
 					</div><!--/.gallery-content-->
 				</div><!--/.container-->
@@ -424,31 +486,41 @@
 										<span class="progressText">距離100人次進場</span>
 										<div class="single-progress-txt">
 											<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="77" aria-valuemin="10" aria-valuemax="100" >
+												<div id="progress-bar-completed" class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="10" aria-valuemax="100" >
 												</div>
 											</div>
-											<h3>仲差23人次</h3>	
+											<h3 style="color: goldenrod;">2025年4月達成！</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
 									<div class="barWrapper">
 										<span class="progressText">累積100位Instagram粉絲</span>
 										<div class="single-progress-txt">
 											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="48" aria-valuemin="10" aria-valuemax="100" >
+											   <div id="progress-bar-uncompleted" class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="10" aria-valuemax="100" >
 												   
 											   </div>
 											</div>
-											<h3>仲差52位</h3>	
+											<h3>仲差25位</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
 									<div class="barWrapper">
 										<span class="progressText">累積100條Google Map🌟🌟🌟🌟以上好評</span>
 										<div class="single-progress-txt">
 											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="3" aria-valuemin="10" aria-valuemax="100">
+											   <div id="progress-bar-uncompleted" class="progress-bar" role="progressbar" aria-valuenow="5" aria-valuemin="10" aria-valuemax="100">
 											   </div>
 											</div>
-											<h3>仲差97條</h3>	
+											<h3>仲差95條</h3>	
+										</div>
+									</div><!-- /.barWrapper -->
+									<div class="barWrapper">
+										<span class="progressText">距離500人次進場</span>
+										<div class="single-progress-txt">
+											<div class="progress ">
+												<div id="progress-bar-uncompleted" class="progress-bar" role="progressbar" aria-valuenow="23" aria-valuemin="10" aria-valuemax="100" >
+												</div>
+											</div>
+											<h3>仲差384人次</h3>	
 										</div>
 									</div><!-- /.barWrapper -->
 								</div>
@@ -609,6 +681,10 @@
 										<tr>
 											<td>壽星<span class="smaller-font">（距離生日日期7日內）</span> <br> / 小童<span class="smaller-font">（12 歲或以下）</span> </td>
 											<td>5折</td>
+										</tr>
+										<tr>
+											<td>2025 DSER</td>
+											<td>二人同行 一人免費</td>
 										</tr>
 									</tbody>
 								</table>
