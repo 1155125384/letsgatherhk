@@ -1,67 +1,179 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>房間檢查</title>
+    <title>房間檢查</title>
 </head>
+<style>
+    body {
+    	zoom: 1;
+    }
+	input[type="checkbox"] {
+		transform: scale(3); 
+		margin-left: 8px;
+		margin-right: 8px;
+	}
+	#resetBtn {
+		font-size: 20px;
+		padding: 12px 24px;
+	}
+</style>
+
 <body>
-  <h2>房間檢查列表</h2>
+    <h2>房間檢查列表</h2>
 
-  <button id="resetBtn">🔄 Reset All</button>
+    <button id="resetBtn"> 🔄 重設（ 會清除所有 √ ）🔄 </button>
+	<br>
+	<br>
 
-  <h3>門外位置</h3>
+    <h3>A) 事前準備</h3>
+    <div>
+        <label>
+            <input type="checkbox" class="room-check" id="checkbox1"> A1) 確認人數
+            <small>
+				<br> 用作預備即棄拖鞋、飲品、夾公仔機硬幣數量
+			</small>
+        </label>
+        <br><br>
 
-  <!-- 20 checkboxes with the same class but different IDs -->
-  <div>
-    <label><input type="checkbox" class="room-check" id="checkbox1"> 1</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox2"> 2</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox3"> 3</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox4"> 4</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox5"> 5</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox6"> 6</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox7"> 7</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox8"> 8</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox9"> 9</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox10"> 10</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox11"> 11</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox12"> 12</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox13"> 13</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox14"> 14</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox15"> 15</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox16"> 16</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox17"> 17</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox18"> 18</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox19"> 19</label><br>
-    <label><input type="checkbox" class="room-check" id="checkbox20"> 20</label><br>
-  </div>
+		<label>
+            <input type="checkbox" class="room-check" id="checkbox1"> A2) 確認入場時間
+			<small>
+				<br> 預計需要 45分鐘 - 60分鐘 整理場地
+				<br> 必須於下場客人 <strong>入場前20分鐘</strong> 離開場地
+			</small>
+        </label>
+        <br><br>
 
-  <script>
-    const checkboxes = document.querySelectorAll('.room-check');
+		<label>
+            <input type="checkbox" class="room-check" id="checkbox1"> A3) 檢查是否需要預備飲品
+			<small>
+				<br> 部份客人並無享用飲品福利，則無需預備飲品
+			</small>
+        </label>
+        <br>
+        <br>
 
-    // Load saved state
-    window.onload = function () {
-      checkboxes.forEach(checkbox => {
-        const saved = localStorage.getItem(checkbox.id);
-        if (saved!== null) {
-          checkbox.checked = JSON.parse(saved);
-}
-});
-};
+		<label>
+            <input type="checkbox" class="room-check" id="checkbox1"> A4) 檢查是否需要夾公仔機硬幣福利
+			<small>
+				<br> 部份客人並無享用夾公仔機硬幣福利，則無需預備$5硬幣
+			</small>
+        </label>
+        <br>
+        <br>
 
-    // Save state
-    checkboxes.forEach(checkbox => {
-      checkbox.addEventListener('change', function () {
-        localStorage.setItem(checkbox.id, checkbox.checked);
-});
-});
+		<label>
+            <input type="checkbox" class="room-check" id="checkbox1"> A5) 檢查是否需要騰空雪櫃放生日蛋糕
+			<small>
+				<br> 部份客人需要騰空雪櫃放置生日蛋糕，詳細做法請參照下列
+			</small>
+        </label>
+        <br>
+        <br>
+	</div>
 
-    // Reset button logic
-    document.getElementById('resetBtn').addEventListener('click', function () {
-      checkboxes.forEach(checkbox => {
-        checkbox.checked = false;
-        localStorage.removeItem(checkbox.id);
-});
-});
-  </script>
+
+
+	<h3>B) 門外位置</h3>
+        <div>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox1"> B1) 補即棄拖鞋
+                <br> 拖鞋在門外白色長凳收納空間內，把白色長凳打開，可以看到即棄拖鞋。
+                <br> 把全新的即棄拖鞋，放到鞋櫃架上頂層的奶白色盒子
+				<br> 即棄拖鞋預備數量 = 客人人數 + 1
+            </label>
+            <br>
+            <br>
+
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox2"> 2</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox3"> 3</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox4"> 4</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox5"> 5</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox6"> 6</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox7"> 7</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox8"> 8</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox9"> 9</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox10"> 10</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox11"> 11</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox12"> 12</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox13"> 13</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox14"> 14</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox15"> 15</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox16"> 16</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox17"> 17</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox18"> 18</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox19"> 19</label>
+            <br>
+            <label>
+                <input type="checkbox" class="room-check" id="checkbox20"> 20</label>
+            <br>
+        </div>
+
+        <script>
+            const checkboxes = document.querySelectorAll('.room-check');
+        
+            // Load saved state
+            window.onload = function () {
+              checkboxes.forEach(checkbox => {
+                const saved = localStorage.getItem(checkbox.id);
+                if (saved!== null) {
+                  checkbox.checked = JSON.parse(saved);
+        }
+        });
+        };
+        
+            // Save state
+            checkboxes.forEach(checkbox => {
+              checkbox.addEventListener('change', function () {
+                localStorage.setItem(checkbox.id, checkbox.checked);
+        });
+        });
+        
+            // Reset button logic
+            document.getElementById('resetBtn').addEventListener('click', function () {
+              checkboxes.forEach(checkbox => {
+                checkbox.checked = false;
+                localStorage.removeItem(checkbox.id);
+        });
+        });
+        </script>
 
 </body>
+
 </html>
