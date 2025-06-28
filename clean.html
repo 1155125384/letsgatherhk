@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>房間檢查</title>
+</head>
+<body>
+  <h2>房間檢查列表</h2>
+
+  <button id="resetBtn">🔄 Reset All</button>
+
+  <h3>門外位置</h3>
+
+  <!-- 20 checkboxes with the same class but different IDs -->
+  <div>
+    <label><input type="checkbox" class="room-check" id="checkbox1"> 1</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox2"> 2</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox3"> 3</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox4"> 4</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox5"> 5</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox6"> 6</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox7"> 7</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox8"> 8</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox9"> 9</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox10"> 10</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox11"> 11</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox12"> 12</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox13"> 13</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox14"> 14</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox15"> 15</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox16"> 16</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox17"> 17</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox18"> 18</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox19"> 19</label><br>
+    <label><input type="checkbox" class="room-check" id="checkbox20"> 20</label><br>
+  </div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('.room-check');
+
+    // Load saved state
+    window.onload = function () {
+      checkboxes.forEach(checkbox => {
+        const saved = localStorage.getItem(checkbox.id);
+        if (saved!== null) {
+          checkbox.checked = JSON.parse(saved);
+}
+});
+};
+
+    // Save state
+    checkboxes.forEach(checkbox => {
+      checkbox.addEventListener('change', function () {
+        localStorage.setItem(checkbox.id, checkbox.checked);
+});
+});
+
+    // Reset button logic
+    document.getElementById('resetBtn').addEventListener('click', function () {
+      checkboxes.forEach(checkbox => {
+        checkbox.checked = false;
+        localStorage.removeItem(checkbox.id);
+});
+});
+  </script>
+
+</body>
+</html>
