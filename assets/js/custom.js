@@ -144,34 +144,5 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function(){
-    if (!('IntersectionObserver' in window)) {
-      // fallback: load all sources immediately
-      document.querySelectorAll('video[data-src]').forEach(v => {
-        const src = v.getAttribute('data-src');
-        if (src) { v.innerHTML = `<source src="${src}" type="video/mp4">`; v.load(); }
-      });
-      return;
-    }
-    const io = new IntersectionObserver((entries, obs) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const v = entry.target;
-          const src = v.getAttribute('data-src');
-          if (src && !v.querySelector('source')) {
-            v.innerHTML = `<source src="${src}" type="video/mp4">`;
-            v.load();
-          }
-          // optionally autoplay muted when visible
-          if (v.hasAttribute('autoplay') || v.getAttribute('data-autoplay') === 'true') {
-            v.play().catch(()=>{});
-          }
-          obs.unobserve(v);
-        }
-      });
-    }, {rootMargin: '200px'});
-    document.querySelectorAll('video[data-src]').forEach(v => io.observe(v));
-});
-
-
 	
+
